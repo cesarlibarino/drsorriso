@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dr Sorriso | Clínica Odontológica</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Plus Jakarta Sans', sans-serif; background:#f8fafc; color:#1e293b; overflow-x:hidden; }
+    
+    .hero-bg {
+      background: linear-gradient(rgba(248, 250, 252, 0.85), rgba(248, 250, 252, 0.7)), 
+                  url('/img/hero_drsorriso.webp');
+      background-size: cover; background-position: center;
+    }
+
+    .glass { backdrop-filter: blur(12px); background: rgba(255, 255, 255, 0.95); }
+    
+    /* ANIMAÇÕES E MOVIMENTO - Adaptado para o Ciano da Dr Sorriso */
+    .btn-glow { 
+      background: linear-gradient(to right, #1e3a8a, #0ea5e9); /* Azul escuro para Ciano */
+      animation: pulse-soft 2.5s infinite; 
+    }
+    
+    @keyframes pulse-soft {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.4); } 
+      70% { transform: scale(1.02); box-shadow: 0 0 0 15px rgba(14, 165, 233, 0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(14, 165, 233, 0); }
+    }
+
+    .hover-up { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s; }
+    .hover-up:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+
+    .float-wa { animation: float-up-down 3s ease-in-out infinite; }
+    @keyframes float-up-down {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="fixed top-0 w-full z-50 glass border-b border-slate-200 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="font-extrabold text-2xl tracking-tighter flex items-center gap-1">
+        <span class="text-blue-900">Dr</span><span class="text-sky-500">Sorriso</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="#diferenciais" class="font-semibold text-slate-700 hover:text-sky-500 transition">Diferenciais</a>
+        <a href="#tratamentos" class="font-semibold text-slate-700 hover:text-sky-500 transition">Tratamentos</a>
+        <a href="#depoimentos" class="font-semibold text-slate-700 hover:text-sky-500 transition">Avaliações</a>
+        <a href="#sobre" class="font-semibold text-slate-700 hover:text-sky-500 transition">A Clínica</a>
+      </nav>
+      <a href="https://api.whatsapp.com/send?phone=557734211880&text=Ol%C3%A1%2C%20vim%20pelo%20instagram%E2%80%A6" target="_blank" class="hidden md:block bg-blue-900 text-white px-6 py-2.5 rounded-full font-bold hover:bg-blue-800 transition shadow-md">
+        Agendar Consulta
+      </a>
+    </div>
+  </header>
+
+  <section class="hero-bg min-h-screen flex items-center pt-24" id="inicio">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 items-center gap-12">
+      <div>
+        <span class="bg-sky-100 text-sky-700 px-4 py-1.5 rounded-full font-bold text-xs uppercase tracking-widest mb-6 inline-block hover-up">
+          Excelência e Carinho
+        </span>
+        <h1 class="text-4xl lg:text-7xl font-extrabold leading-tight text-slate-900 mb-6">
+          Sorrisos saudáveis <span class="text-sky-500">começam aqui.</span>
+        </h1>
+        <p class="text-lg text-slate-600 mb-10 leading-relaxed max-w-lg">
+          Cuidando do seu bem-estar com excelência e carinho. Agende sua consulta e descubra o poder de um sorriso radiante!
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="https://api.whatsapp.com/send?phone=557734211880&text=Ol%C3%A1%2C%20vim%20pelo%20instagram%E2%80%A6" target="_blank" class="btn-glow inline-flex justify-center items-center gap-2 text-white px-10 py-5 rounded-2xl font-black text-lg shadow-xl hover:scale-105 transition-transform">
+            <i data-lucide="message-circle" class="w-6 h-6"></i> Descobrir meu novo sorriso
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white" id="diferenciais">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Cuidando de você</h2>
+        <p class="text-slate-500 text-lg italic">Nosso compromisso é com a sua saúde, conforto e bem-estar.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 flex flex-col items-center text-center hover-up">
+          <i data-lucide="heart-pulse" class="text-sky-500 mb-6 w-12 h-12"></i>
+          <h3 class="text-xl font-bold mb-4 text-blue-900">Excelência & Carinho</h3>
+          <p class="text-slate-600 leading-relaxed">Atendimento humanizado que respeita o seu tempo e elimina qualquer medo do dentista.</p>
+        </div>
+        <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 flex flex-col items-center text-center hover-up">
+          <i data-lucide="shield-check" class="text-sky-500 mb-6 w-12 h-12"></i>
+          <h3 class="text-xl font-bold mb-4 text-blue-900">Segurança Total</h3>
+          <p class="text-slate-600 leading-relaxed">Ambiente rigorosamente esterilizado e profissionais altamente capacitados para o seu tratamento.</p>
+        </div>
+        <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 flex flex-col items-center text-center hover-up">
+          <i data-lucide="sparkles" class="text-sky-500 mb-6 w-12 h-12"></i>
+          <h3 class="text-xl font-bold mb-4 text-blue-900">Sorriso Radiante</h3>
+          <p class="text-slate-600 leading-relaxed">Focamos em resultados duradouros que elevam a sua autoestima logo na primeira consulta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-blue-900 relative overflow-hidden text-white" id="tratamentos">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-5xl font-extrabold mb-4 tracking-tight">Nossas Especialidades</h2>
+        <p class="text-sky-200 text-lg">Tudo o que você precisa em um único centro odontológico.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div class="bg-blue-800 p-6 rounded-2xl shadow-sm border border-blue-700 hover:border-sky-400 hover-up">
+          <i data-lucide="star" class="text-sky-400 mb-4 w-8 h-8"></i>
+          <h3 class="text-lg font-bold mb-2">Estética Dental</h3>
+          <p class="text-blue-100 text-sm">Renove sua autoestima com lentes de contato e facetas de alta naturalidade.</p>
+        </div>
+        <div class="bg-blue-800 p-6 rounded-2xl shadow-sm border border-blue-700 hover:border-sky-400 hover-up">
+          <i data-lucide="settings" class="text-sky-400 mb-4 w-8 h-8"></i>
+          <h3 class="text-lg font-bold mb-2">Implantes</h3>
+          <p class="text-blue-100 text-sm">Segurança e conforto para você voltar a sorrir e mastigar sem medo.</p>
+        </div>
+        <div class="bg-blue-800 p-6 rounded-2xl shadow-sm border border-blue-700 hover:border-sky-400 hover-up">
+          <i data-lucide="activity" class="text-sky-400 mb-4 w-8 h-8"></i>
+          <h3 class="text-lg font-bold mb-2">Ortodontia</h3>
+          <p class="text-blue-100 text-sm">Aparelhos estéticos e modernos para um alinhamento perfeito e discreto.</p>
+        </div>
+        <div class="bg-blue-800 p-6 rounded-2xl shadow-sm border border-blue-700 hover:border-sky-400 hover-up">
+          <i data-lucide="smile-plus" class="text-sky-400 mb-4 w-8 h-8"></i>
+          <h3 class="text-lg font-bold mb-2">Clareamento</h3>
+          <p class="text-blue-100 text-sm">Dentes mais brancos de forma rápida, segura e com sensibilidade controlada.</p>
+        </div>
+      </div>
+      
+      <div class="text-center">
+        <a href="https://api.whatsapp.com/send?phone=557734211880&text=Ol%C3%A1%2C%20vim%20pelo%20instagram%E2%80%A6" target="_blank" class="inline-flex items-center gap-2 bg-sky-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-sky-400 transition-colors shadow-lg text-lg">
+          Agendar minha avaliação <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white" id="sobre">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+      <div class="relative order-2 lg:order-1 flex flex-col items-center gap-6">
+        <img src="/img/sobre_drsorriso.webp" alt="Consultório Dr Sorriso" class="rounded-3xl w-full shadow-2xl hover-up" onerror="this.src='https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1470&auto=format&fit=crop';">
+        <img src="/img/LOGO.jpg" alt="Logo Dr Sorriso" class="rounded-2xl w-1/2 shadow-xl border-4 border-white -mt-16 z-10 bg-white">
+      </div>
+      <div class="order-1 lg:order-2">
+        <h2 class="text-3xl lg:text-5xl font-extrabold mb-8 text-blue-900">Bem-vindo à Dr Sorriso</h2>
+        <p class="text-slate-600 text-lg leading-relaxed mb-6">Somos um centro odontológico focado em transformar a sua relação com a cadeira do dentista. Aliamos tecnologia avançada a um atendimento onde o paciente é o centro de tudo.</p>
+        <p class="text-slate-600 text-lg leading-relaxed font-semibold italic border-l-4 border-sky-500 pl-4 mb-8">"Nosso maior objetivo é ver você confiante. Cuidamos do seu bem-estar com excelência e muito carinho em cada etapa."</p>
+        
+        <a href="https://api.whatsapp.com/send?phone=557734211880&text=Ol%C3%A1%2C%20vim%20pelo%20instagram%E2%80%A6" target="_blank" class="inline-block border-2 border-sky-500 text-sky-600 px-6 py-3 rounded-full font-bold hover:bg-sky-50 transition mb-8">
+          Falar com a recepção
+        </a>
+
+        <div class="space-y-4 text-slate-700 bg-slate-50 p-6 rounded-2xl border border-slate-100">
+          <div class="flex items-center gap-4">
+            <i data-lucide="map-pin" class="text-sky-500"></i>
+            <span class="font-medium">Vitória da Conquista - BA</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <i data-lucide="clock" class="text-sky-500"></i>
+            <span class="font-medium">Atendimento em horário comercial. Consulte-nos!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-slate-50" id="depoimentos">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl lg:text-5xl font-extrabold mb-12 text-blue-900">Histórias de Sorrisos Radiantes</h2>
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-white p-8 rounded-3xl text-left border border-slate-200 hover-up shadow-sm">
+          <div class="flex text-yellow-400 mb-4">
+            <i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i>
+          </div>
+          <p class="italic mb-4 text-slate-600">"Sempre tive medo de dentista, mas a equipe da Dr Sorriso foi tão carinhosa que me senti em casa. Meu tratamento foi um sucesso!"</p>
+          <span class="font-bold text-blue-900">- Paciente Satisfeito</span>
+        </div>
+        <div class="bg-white p-8 rounded-3xl text-left border border-slate-200 hover-up shadow-sm">
+          <div class="flex text-yellow-400 mb-4">
+            <i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i>
+          </div>
+          <p class="italic mb-4 text-slate-600">"Clínica impecável! Fiz minhas lentes de contato e o resultado superou todas as expectativas. Recomendo de olhos fechados."</p>
+          <span class="font-bold text-blue-900">- Paciente Satisfeito</span>
+        </div>
+        <div class="bg-white p-8 rounded-3xl text-left border border-slate-200 hover-up shadow-sm">
+          <div class="flex text-yellow-400 mb-4">
+            <i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i>
+          </div>
+          <p class="italic mb-4 text-slate-600">"Profissionais excelentes. Desde a primeira avaliação até o fim do tratamento, a atenção foi nota mil."</p>
+          <span class="font-bold text-blue-900">- Paciente Satisfeito</span>
+        </div>
+      </div>
+      <a href="https://api.whatsapp.com/send?phone=557734211880&text=Ol%C3%A1%2C%20vim%20pelo%20instagram%E2%80%A6" target="_blank" class="inline-block bg-blue-900 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-800 transition shadow-lg">
+        Quero ser o próximo a sorrir
+      </a>
+    </div>
+  </section>
+
+  <section class="py-24 bg-sky-500 text-white text-center" id="contato">
+    <div class="max-w-3xl mx-auto px-6 hover-up">
+      <h2 class="text-4xl lg:text-6xl font-extrabold mb-8 text-blue-900">Descubra o poder de um sorriso radiante!</h2>
+      <a href="https://api.whatsapp.com/send?phone=557734211880&text=Ol%C3%A1%2C%20vim%20pelo%20instagram%E2%80%A6" target="_blank" class="bg-blue-900 text-white px-12 py-6 rounded-2xl font-black text-xl hover:bg-blue-800 transition shadow-2xl inline-flex items-center gap-3">
+        <i data-lucide="calendar-check"></i> Agendar Minha Consulta
+      </a>
+    </div>
+  </section>
+
+  <footer class="py-10 bg-blue-950 text-center text-slate-400 text-sm">
+    <p>© 2026 Dr Sorriso Clínica Odontológica — Todos os direitos reservados.</p>
+    <p>Vitória da Conquista - BA</p>
+  </footer>
+
+  <a href="https://api.whatsapp.com/send?phone=557734211880&text=Ol%C3%A1%2C%20vim%20pelo%20instagram%E2%80%A6" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#1ebe57] transition-colors z-50 float-wa flex items-center justify-center">
+    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>
